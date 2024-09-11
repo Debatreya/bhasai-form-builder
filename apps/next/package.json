@@ -18,11 +18,11 @@
     "npm": ">=3.0.0"
   },
   "scripts": {
-    "build": "rimraf lib esm dist && npm run build:cjs && npm run build:esm && node --loader ts-node/esm copy.ts",
+    "build:playground": "rimraf lib esm dist && npm run build:cjs && npm run build:esm && node --loader ts-node/esm copy.ts",
     "build:cjs": "tsc --project tsconfig.build.json",
     "build:esm": "tsc --project tsconfig.build.json --module es2015 --outDir esm",
     "dev": "vite",
-    "build:playground": "vite build",
+    "build": "vite build",
     "debug": "vite --debug",
     "preview": "vite preview"
   },
